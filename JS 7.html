@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            ;
+        }
+
+        div {
+            display: inline-block;
+            width: 45vw;
+            height: 49vh;
+            border: 1px solid red;
+
+        }
+    </style>
+</head>
+<body id="myBody">
+
+
+    <script>
+        let abc = document.getElementById("myBody");
+        abc.onmousemove = function(e){
+           // console.log(e.clientX);
+
+        let halfPoint1 = window.innerWidth / 2;
+        let halfpoint2 = window.innerHeight / 2;
+
+        if(e.clientX < halfPoint1 && e.clientY < halfpoint2){
+        myBody.style.background = "blue";
+        
+        }else if (e.clientX < halfPoint1 && e.clientY > halfpoint2){
+        myBody.style.background = "red";
+        }
+        else if (e.clientX > halfPoint1 && e.clientY > halfpoint2 ) {
+            myBody.style.background = "yellow";
+        }
+        else{
+            myBody.style.background = "green";
+        }
+
+        }
+    </script>
+</body>
+</html>

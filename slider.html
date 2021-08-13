@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="slider.css">
+    <title>Document</title>
+</head>
+<body>
+     <div id="container">
+        <div id="slides">
+            <img src="1.jpg" id="slideIMG" alt="">
+
+            <div id="leftbtn">
+                <img src="right.png" onclick="rightSlider()" alt="">
+            </div> 
+
+            <div id="rightbtn">
+                <img src="left1.png" onclick="leftSlider()" alt="">
+            </div>
+            <div >
+                <h1 id="changeNumber">1</h1>
+            </div>
+
+        </div>
+     </div>
+     
+
+     <script>
+         let counter = 1;
+         function leftSlider() {
+            if(counter < 6)
+            {
+                counter++;
+            }
+            else{
+                counter = 1;
+            }
+            slideIMG.src = counter+".jpg";
+            changeNumber.innerHTML = counter;
+         }
+         function rightSlider (){
+             if(counter > 1 ){
+                 counter--;
+            }
+            else{
+                counter = 6;
+            }
+            slideIMG.src = counter+".jpg";
+            changeNumber.innerHTML = counter;
+         }
+     </script>
+</body>
+</html>
